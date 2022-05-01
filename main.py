@@ -9,6 +9,7 @@ import schedule
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import Select
 import item
+import time
 
 driver = webdriver.Chrome(ChromeDriverManager().install())				# 毎回自動で最新のdriverに更新してくれるdriver.implicitly_wait(10) # seconds
 driver.implicitly_wait(10) 																				# 最大で10秒待ち
@@ -23,6 +24,7 @@ driver.get(item.supreme_url)
 
 # driver.find_element(By.xpath("//img[@alt=%s]" %item.color)).click();
 driver.find_element_by_xpath("//*[@id=\"details\"]/ul/li[3]/button[1]").click()
+time.sleep(5)
 # item_color = driver.find_elements_by_xpath("//img[@alt=%s]" %item.color)			# 商品のカラーを選択する
 # print("//button[@data-style-name=%s]" %item.color)
 # print(item_color)
