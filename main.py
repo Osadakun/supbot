@@ -23,7 +23,8 @@ driver.get(item.supreme_url)
 #   password="password"
 
 # driver.find_element(By.xpath("//img[@alt=%s]" %item.color)).click();
-driver.find_element_by_xpath("//*[@id=\"details\"]/ul/li[3]/button[1]").click()
+# driver.find_element_by_xpath("//*[@id=\"details\"]/ul/li[3]/button[1]").click()
+driver.find_element_by_xpath("//*[@id=\"details\"]/ul/li[3]/button/img").click()
 time.sleep(5)
 # item_color = driver.find_elements_by_xpath("//img[@alt=%s]" %item.color)			# 商品のカラーを選択する
 # print("//button[@data-style-name=%s]" %item.color)
