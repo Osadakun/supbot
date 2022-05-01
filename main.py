@@ -20,8 +20,8 @@ driver.get(item.supreme_url)
 #   url2="購入するもののURL"
 #   login="mailadless"
 #   password="password"
-
-item_color = driver.find_elements_by_xpath("//img[@alt=%s]" %item.color)			# 商品のカラーを選択する
+driver.findElement(By.xpath("//img[@alt=%s]" %item.color)).click();
+# item_color = driver.find_elements_by_xpath("//img[@alt=%s]" %item.color)			# 商品のカラーを選択する
 # print("//button[@data-style-name=%s]" %item.color)
 print(item_color)
 # def job():
